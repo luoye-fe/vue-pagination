@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<h1>当前页数是：{{config.currentPage}}</h1>
+		<v-pagination :pagination-config="config"></v-pagination>
+	</div>
+	<script type="text/javascript" src="http://cdn.bootcss.com/vue/1.0.26/vue.js"></script>
+	<script type="text/javascript" src="../dist/vue-pagination.js"></script>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				config: {
+					currentPage: 1,
+					itemsPerPage: 10,
+					pagesLength: 5,
+					totalItems: 0,
+					onChange() {}
+				}
+			},
+			ready() {
+				var _this = this;
+
+				// async operate to get totalItems
+				setTimeout(function() {
+					_this.config.totalItems = 100;
+				}, 2000);
+
+				// Invoked when currentPage change
+				this.config.onChange = function() {
+					console.log(_this.config.currentPage);
+				}
+			}
+		})
+	</script>
+</body>
+</html>
