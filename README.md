@@ -1,7 +1,7 @@
 vue-pagination
 -------------------
 
-[中文文档](./doc/CHINES.md)
+[中文文档](./doc/CHINESE.md)
 
 Pagination component for [Vue.js](vuejs.org).  
 
