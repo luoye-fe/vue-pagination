@@ -10,10 +10,12 @@ Pagination component for [Vue.js](vuejs.org).
 Installation
 
 * Script Tag
-    
-    ```js
+    ```html
+    <div id="app">
+        <v-pagination :pagination-config="..."></v-pagination>
+    </div>
     <script type="text/javascript" src="http://cdn.bootcss.com/vue/1.0.26/vue.js"></script>
-    <script type="text/javascript" src="http://cdn.bootcss.com/vue/1.0.26/vue.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/luoye-fe/vue-pagination/master/dist/vue-pagination.min.js"></script>
     ```
 
 * NPM
