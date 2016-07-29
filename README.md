@@ -30,7 +30,7 @@ Pagination component for [Vue.js](vuejs.org).
 * template
 
     ```html
-    <v-pagination :pagination-conf="config"></v-pagination>
+    <v-pagination :pagination-config="config"></v-pagination>
     ```
 
 * js
