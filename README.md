@@ -82,7 +82,7 @@ Pagination component for [Vue.js](vuejs.org).
 
 * pagination config
     
-    vue-pagination accept props named `pagination-conf`, you must pass some required options, all options as follows.
+    vue-pagination accept props named `pagination-config`, you must pass some required options, all options as follows.
 
     | Name          | Type     | Default | Required | Description
     | :------------ | :--------| :-------| :--------| :-----------
