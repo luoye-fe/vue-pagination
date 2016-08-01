@@ -38,9 +38,6 @@ export default function(componentOptions) {
 				numberOfPages: 0
 			};
 		},
-		ready: function() {
-			this.initConfig();
-		},
 		methods: {
 			changePage(page) {
 				if (page === '...') {
@@ -106,14 +103,14 @@ export default function(componentOptions) {
 					this.initConfig();
 					this.generatePageList();
 				},
-				deep: true
+				immediate: true
 			},
 			'resultOptions.currentPage': {
 				handler() {
-					if (this.resultOptions.currentPage && this.paginationConfig.totalItems !== 0) {
+					if (this.paginationConfig.currentPage !== this.resultOptions.currentPage) {
 						this.generatePageList();
 						this.paginationConfig.currentPage = this.resultOptions.currentPage;
-						if (typeof this.resultOptions.onChange !== 'function') {
+						if (typeof this.paginationConfig.onChange !== 'function') {
 							warn('Config of "onChange" must be a function!');
 							return;
 						}

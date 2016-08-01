@@ -1,0 +1,15 @@
+# OSX
+.DS_Store
+
+# EDITOR or IDE
+.idea
+.gradle
+local.properties
+.project
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# custom
+dist/*.map
