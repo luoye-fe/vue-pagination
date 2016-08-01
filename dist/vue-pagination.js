@@ -131,7 +131,7 @@
   							warn('Config of "onChange" must be a function!');
   							return;
   						}
-  						this.resultOptions.onChange && this.resultOptions.onChange();
+  						this.paginationConfig.onChange && this.paginationConfig.onChange();
   					}
   				}
   			}
