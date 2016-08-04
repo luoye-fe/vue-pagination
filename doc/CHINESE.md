@@ -28,7 +28,7 @@ vue-pagination
 * template
 
     ```html
-    <v-pagination :pagination-conf="config"></v-pagination>
+    <v-pagination :pagination-conf.sync="config"></v-pagination>
     ```
 
 * js

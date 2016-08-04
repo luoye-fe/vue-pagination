@@ -30,7 +30,7 @@ Pagination component for [Vue.js](vuejs.org).
 * template
 
     ```html
-    <v-pagination :pagination-config="config"></v-pagination>
+    <v-pagination :pagination-config.sync="config"></v-pagination>
     ```
 
 * js
@@ -82,7 +82,7 @@ Pagination component for [Vue.js](vuejs.org).
 
 * pagination config
     
-    vue-pagination accept props named `pagination-config`, you must pass some required options, all options as follows.
+    vue-pagination accept props named `pagination-config.sync`, you must pass some required options, all options as follows.
 
     | Name          | Type     | Default | Required | Description
     | :------------ | :--------| :-------| :--------| :-----------
