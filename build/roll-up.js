@@ -35,7 +35,6 @@ rollup.rollup({
 	entry: path.join(__dirname, '../src/index.js'),
 	plugins: [
 		babel({
-			presets: ['es2015-rollup']
 		})
 	]
 }).then(function(bundle) {
@@ -49,7 +48,6 @@ rollup.rollup({
 		entry: 'src/index.js',
 		plugins: [
 			babel({
-				presets: ['es2015-rollup']
 			})
 		]
 	});
