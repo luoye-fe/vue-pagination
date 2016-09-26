@@ -11,7 +11,10 @@
     "build": "node ./build/roll-up.js",
     "dev": "webpack --watch --config ./build/webpack.dev.js"
   },
-  "keywords": ["vue", "pagination"],
+  "keywords": [
+    "vue",
+    "pagination"
+  ],
   "author": "Luo Ye <842891024@qq.com>",
   "repository": {
     "type": "git",
@@ -22,8 +25,8 @@
   "devDependencies": {
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
     "rollup": "^0.34.1",
     "rollup-plugin-babel": "^2.6.1",
     "uglify-js": "^2.7.0",
