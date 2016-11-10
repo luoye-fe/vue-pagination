@@ -8,16 +8,29 @@
 	<div id="app">
 		<h1>当前页数是：{{config.currentPage}}</h1>
 		<v-pagination :pagination-config.sync="config"></v-pagination>
+		<v-pagination :pagination-config.sync="config2"></v-pagination>
+		<!-- <v-test :pagination-config.sync="test"></v-test> -->
+		<!-- <v-test :pagination-config.sync="test2"></v-test> -->
 	</div>
 	<script type="text/javascript" src="http://cdn.bootcss.com/vue/1.0.26/vue.js"></script>
 	<script type="text/javascript" src="../dist/vue-pagination.js"></script>
 	<script type="text/javascript">
+
 		new Vue({
 			el: '#app',
 			data: {
+				test: '123',
+				test2: '456',
 				config: {
 					currentPage: 1,
 					itemsPerPage: 10,
+					pagesLength: 7,
+					totalItems: 0,
+					onChange() {}
+				},
+				config2: {
+					currentPage: 1,
+					itemsPerPage: 5,
 					pagesLength: 7,
 					totalItems: 0,
 					onChange() {}
@@ -29,15 +42,17 @@
 				// async operate to get totalItems
 				setTimeout(function() {
 					_this.config.totalItems = 200;
+					_this.config2.totalItems = 10;
 				}, 2000);
 
 				// Invoked when currentPage change
 				this.config.onChange = function() {
 					console.log(_this.config.currentPage);
 				}
-				window.setconfig = function (params) {
-					_this.config = params
-				}
+				
+				// window.setconfig = function (params) {
+				// 	_this.config = params
+				// }
 			}
 		})
 	</script>

@@ -1,22 +1,5 @@
 import { mixin, warn } from './util.js';
 
-let defaultOptions = {
-	firstStr: 'First',
-	prevStr: 'Prev',
-	nextStr: 'Next',
-	lastStr: 'Last',
-	first: true,
-	prev: true,
-	next: true,
-	last: true,
-	normal: true,
-	currentPage: 1,
-	itemsPerPage: 10,
-	pagesLength: 5,
-	totalItems: 0,
-	onChange: function() {}
-};
-
 export default function(componentOptions) {
 	return {
 		name: 'vue-pagination',
@@ -38,6 +21,22 @@ export default function(componentOptions) {
 			};
 		},
 		ready() {
+			this.paginationConfig = mixin({
+				firstStr: 'First',
+				prevStr: 'Prev',
+				nextStr: 'Next',
+				lastStr: 'Last',
+				first: true,
+				prev: true,
+				next: true,
+				last: true,
+				normal: true,
+				currentPage: 1,
+				itemsPerPage: 10,
+				pagesLength: 5,
+				totalItems: 0,
+				onChange: function() {}
+			}, this.paginationConfig);
 			this.initConfig();
 		},
 		methods: {
@@ -59,7 +58,6 @@ export default function(componentOptions) {
 			},
 			initConfig() {
 				if (this.paginationConfig === undefined) return;
-				this.paginationConfig = mixin(defaultOptions, this.paginationConfig);
 				this.numberOfPages = Math.ceil(this.paginationConfig.totalItems / this.paginationConfig.itemsPerPage);
 				if (this.paginationConfig.pagesLength % 2 === 0) {
 					this.paginationConfig.pagesLength = this.paginationConfig.pagesLength - 1;
